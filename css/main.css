@@ -1,0 +1,24 @@
+@import './colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open Sans' sans-serif;
+	font-size: 1.6rem;
+}
+
+body {
+	font-family: 'Cinzel', serif;
+	font-family: 'Raleway', sans-serif;
+} /*# sourceMappingURL=main.css.map */
