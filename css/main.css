@@ -16,5 +16,34 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1.6rm;
   color: #fff;
+  background-color: #fff;
+}
+
+.footer {
+  color: #fff;
   background-color: #232323;
+}
+.footer__box-title {
+  margin-bottom: 1em;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.footer__box-social {
+  margin: 2em 0 1em;
+}
+.footer__box-link {
+  color: #fff;
+  font-size: 3.6rem;
+}
+.footer__bottom-text {
+  padding: 2em;
+  font-size: 1.1em;
+  text-align: center;
+}
+.footer p {
+  font-size: 1.5em;
+}
+
+.wrapper {
+  padding: 6em 2em 2em;
 }/*# sourceMappingURL=main.css.map */
