@@ -19,6 +19,13 @@ body {
   background-color: #fff;
 }
 
+h1.header__name-company {
+  margin-bottom: 0, 5em;
+  font-size: 3rem;
+  font-family: "Cinzel", serif;
+  color: #d6c78e;
+}
+
 .footer {
   color: #fff;
   background-color: #232323;
@@ -46,4 +53,22 @@ body {
 
 .wrapper {
   padding: 6em 2em 2em;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hamburger {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

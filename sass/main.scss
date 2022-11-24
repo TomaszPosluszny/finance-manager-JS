@@ -18,6 +18,26 @@ body {
 	color: $white;
 	background-color: $white;
 }
+h1.header__name-company {
+	margin-bottom: 0, 5em;
+	font-size: 3rem;
+	font-family: 'Cinzel', serif;
+	color: $gold;
+}
+// .hamburger {
+// 	position: absolute;
+// 	top: 3em;
+// 	left: 1em;
+// 	transform: (-50%);
+// 	z-index: 500;
+
+// 	&-inner,
+// 	&-inner::before,
+//     &-inner::after {
+// 		background-color: $white;
+// 		z-index: 500;
+// 	}
+// }
 .footer {
 	color: $white;
 	background-color: $dark;
@@ -46,3 +66,27 @@ body {
 .wrapper {
 	padding: 6em 2em 2em;
 }
+.nav {
+	&-mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+.hamburger {
+	display: block;
+}
+// .burger-icon {
+// 	display: block;
+// margin-left: auto;
+// padding: 0 30px;
+// line-height: 60px;
+// font-size: 30px;
+// background: none;
+// border: none;
+// cursor: pointer;
+// }
+@import './small';
+@import './large';
