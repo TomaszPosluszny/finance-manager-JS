@@ -1,5 +1,6 @@
 @import './colors';
 
+
 *,
 *::before,
 *::after {
@@ -76,17 +77,19 @@ h1.header__name-company {
 	}
 }
 .hamburger {
+	position: absolute;
+	top: 3em;
+	left: 1em;
+	transform: translateY(-50%);
+	z-index: 500;
 	display: block;
+	background-color: #fff;
+
+	&-inner {
+		background-color: white;
+		z-index: 500;
+	}
 }
-// .burger-icon {
-// 	display: block;
-// margin-left: auto;
-// padding: 0 30px;
-// line-height: 60px;
-// font-size: 30px;
-// background: none;
-// border: none;
-// cursor: pointer;
-// }
+
 @import './small';
 @import './large';

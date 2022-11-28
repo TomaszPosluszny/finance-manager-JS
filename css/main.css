@@ -64,7 +64,17 @@ h1.header__name-company {
 }
 
 .hamburger {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  transform: translateY(-50%);
+  z-index: 500;
   display: block;
+  background-color: #fff;
+}
+.hamburger-inner {
+  background-color: white;
+  z-index: 500;
 }
 
 @media (min-width: 900px) {
