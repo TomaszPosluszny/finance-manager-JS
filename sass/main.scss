@@ -1,6 +1,5 @@
 @import './colors';
 
-
 *,
 *::before,
 *::after {
@@ -22,11 +21,10 @@ body {
 
 nav {
 	background-color: $dark;
-	
 }
 h1.header__name-company {
 	margin-bottom: 0, 5em;
-	font-size: 3rem;
+	font-size: 2rem;
 	font-family: 'Cinzel', serif;
 	color: $gold;
 }
@@ -58,24 +56,6 @@ h1.header__name-company {
 }
 .wrapper {
 	padding: 6em 2em 2em;
-}
-// .nav {
-// 	&-mobile {
-// 		position: absolute;
-// 		top: 0;
-// 		left: 0;
-// 		right: 0;
-// 		bottom: 0;
-// 	}
-// }
-.hamburger {
-	position: absolute;
-	top: 3em;
-	left: 1em;
-	transform: translateY(-50%);
-	z-index: 500;
-	display: block;
-	background-color: #fff;
 }
 
 .nav__mobile {
@@ -129,7 +109,7 @@ h1.header__name-company {
 		opacity: 0;
 	}
 }
-<<<<<<< HEAD
+
 .hamburger {
 	position: absolute;
 	top: 3em;
@@ -145,7 +125,10 @@ h1.header__name-company {
 	}
 }
 
-=======
->>>>>>> header
+.nav__deskop {
+	display: none;
+}
+
 @import './small';
 @import './large';
+@import './menager'

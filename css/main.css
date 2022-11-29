@@ -25,7 +25,7 @@ nav {
 
 h1.header__name-company {
   margin-bottom: 0, 5em;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Cinzel", serif;
   color: #d6c78e;
 }
@@ -59,16 +59,6 @@ h1.header__name-company {
   padding: 6em 2em 2em;
 }
 
-.hamburger {
-  position: absolute;
-  top: 3em;
-  left: 1em;
-  transform: translateY(-50%);
-  z-index: 500;
-  display: block;
-  background-color: #fff;
-}
-
 .nav__mobile {
   position: absolute;
   top: 0;
@@ -95,20 +85,6 @@ h1.header__name-company {
   font-size: 2.3;
 }
 
-<<<<<<< HEAD
-.hamburger {
-  position: absolute;
-  top: 3em;
-  left: 1em;
-  transform: translateY(-50%);
-  z-index: 500;
-  display: block;
-  background-color: #fff;
-}
-.hamburger-inner {
-  background-color: white;
-  z-index: 500;
-=======
 .mobile__link {
   position: relative;
   display: inline-block;
@@ -132,10 +108,31 @@ h1.header__name-company {
   height: 100%;
   border: 1px solid #d6c78e;
   opacity: 0;
->>>>>>> header
+}
+
+.hamburger {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  transform: translateY(-50%);
+  z-index: 500;
+  display: block;
+  background-color: #fff;
+}
+.hamburger-inner {
+  background-color: white;
+  z-index: 500;
+}
+
+.nav__deskop {
+  display: none;
 }
 
 @media (min-width: 900px) {
+  .nav__deskop {
+    display: flex;
+    justify-content: space-around;
+  }
   .deskop__link {
     position: relative;
     display: inline-block;
@@ -146,6 +143,18 @@ h1.header__name-company {
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.3s;
+  }
+  .deskop__link--border {
+    position: relative;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 2.9;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+    border: 1px solid #d6c78e;
   }
   .deskop__link:hover {
     color: #d6c78e;
@@ -163,4 +172,53 @@ h1.header__name-company {
   .hamburger {
     display: none;
   }
+}
+:root {
+  --first-color: #f9f9f9;
+  --second-color: #14161f;
+  --border-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: var(--second-color);
+  background-color: var(--first-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.transactions {
+  width: 1000px;
+}
+.transactions__title {
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 200;
+}
+.transactions__list {
+  display: flex;
+}
+
+.area {
+  margin: 0 20px;
+  padding: 30px;
+  width: 50%;
+  border: 1px solid var(--border-color);
+}
+.area__income {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+.area__expenses {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
