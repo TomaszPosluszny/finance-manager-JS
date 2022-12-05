@@ -173,17 +173,11 @@ h1.header__name-company {
     display: none;
   }
 }
-:root {
-  --first-color: #f9f9f9;
-  --second-color: #14161f;
-  --border-color: rgba(0, 0, 0, 0.2);
-}
-
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  color: var(--second-color);
-  background-color: var(--first-color);
+  color: #191919;
+  background-color: #fff;
 }
 
 main {
@@ -192,8 +186,56 @@ main {
   align-items: flex-start;
 }
 
+.wallet {
+  padding: 20px 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 400px;
+  border: 1px solid #191919;
+}
+.wallet__money {
+  margin-top: -10px;
+  text-align: center;
+  font-size: 60px;
+}
+.wallet__controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+.wallet__controls--add {
+  padding: 12px 20px;
+  color: #232323;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  background: none;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.wallet__controls--delete {
+  padding: 12px 20px;
+  color: #232323;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  background: none;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+.wallet__controls--delete:hover {
+  color: #fff;
+  background-color: #232323;
+}
+.wallet__controls--add:hover {
+  color: #fff;
+  background-color: #232323;
+}
+.wallet__controls i {
+  margin-right: 10px;
+}
+
 .transactions {
-  width: 1000px;
+  width: 1200px;
 }
 .transactions__title {
   margin-bottom: 30px;
@@ -210,7 +252,7 @@ main {
   margin: 0 20px;
   padding: 30px;
   width: 50%;
-  border: 1px solid var(--border-color);
+  border: 1px solid #191919;
 }
 .area__income {
   margin-bottom: 30px;

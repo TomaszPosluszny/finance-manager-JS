@@ -1,14 +1,10 @@
-:root {
-	--first-color: #f9f9f9;
-	--second-color: #14161f;
-	--border-color: rgba(0, 0, 0, 0.2);
-}
+
 
 body {
 	min-height: 100vh;
 	font-family: 'Montserrat', sans-serif;
-	color: var(--second-color);
-	background-color: var(--first-color);
+	color: $darker;
+	background-color: $white;
 }
 
 main {
@@ -17,8 +13,59 @@ main {
 	align-items: flex-start;
 }
 
+
+
+.wallet {
+	padding: 20px 20px;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-right: 20px;
+
+	width: 400px;
+	border: 1px solid $darker;
+	&__money {
+		margin-top: -10px;
+		text-align: center;
+		font-size: 60px;
+	}
+	&__controls {
+		display: flex;
+		justify-content: space-around;
+		margin: 40px 0;
+		&--add {
+			padding: 12px 20px;
+			color: $dark;
+			border: 1px solid $darker;
+			border-radius: 5px;
+			background: none;
+			transition: color 0.3s, background-color 0.3s;
+			cursor: pointer;
+		}
+		&--delete {
+			padding: 12px 20px;
+			color: $dark;
+			border: 1px solid $darker;
+			border-radius: 5px;
+			background: none;
+			transition: color 0.3s, background-color 0.3s;
+			cursor: pointer;
+		}
+		&--delete:hover {
+			color: $white;
+			background-color: $dark;
+		}
+		&--add:hover {
+			color: $white;
+			background-color: $dark;
+		}
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
 .transactions {
-	width: 1000px;
+	width: 1200px;
 
 	&__title {
 		margin-bottom: 30px;
@@ -35,16 +82,15 @@ main {
 	margin: 0 20px;
 	padding: 30px;
 	width: 50%;
-	border: 1px solid var(--border-color);
+	border: 1px solid $darker;
 	&__income {
 		margin-bottom: 30px;
 		font-size: 28px;
 		text-align: center;
 	}
-	&__expenses{
+	&__expenses {
 		margin-bottom: 30px;
 		font-size: 28px;
 		text-align: center;
 	}
 }
-
