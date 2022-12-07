@@ -30,6 +30,7 @@ h1.header__name-company {
 }
 
 .footer {
+	width: 100%;
 	color: $white;
 	background-color: $dark;
 	&__box-title {
@@ -131,4 +132,4 @@ h1.header__name-company {
 
 @import './small';
 @import './large';
-@import './menager'
+@import './menager';
