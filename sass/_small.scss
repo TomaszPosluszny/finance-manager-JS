@@ -6,7 +6,7 @@
 		align-items: center;
 	}
 	.transactions {
-		width: 350px;
+		width: 340px;
 		margin-bottom: 30px;
 		&__list {
 			display: flex;
@@ -15,7 +15,7 @@
 			flex-direction: column;
 		}
 	}
-	.app-body {
+	.time__body {
 		width: 300px;
 	}
 }

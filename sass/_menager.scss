@@ -190,22 +190,3 @@ h3 {
 }
 
 
-
-
-.settings {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	padding: 50px 30px;
-	width: 200px;
-	background-color: #fff;
-	border: 1px solid black;
-	border-radius: 8px;
-	opacity: 0;
-	transition: transform 0.5s, opacity 0.3s;
-}
-

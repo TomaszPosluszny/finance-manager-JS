@@ -305,23 +305,6 @@ h3 {
   text-align: center;
 }
 
-.settings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 50px 30px;
-  width: 200px;
-  background-color: #fff;
-  border: 1px solid black;
-  border-radius: 8px;
-  opacity: 0;
-  transition: transform 0.5s, opacity 0.3s;
-}
-
 @media (max-width: 576px) {
   main {
     display: flex;
@@ -330,7 +313,7 @@ h3 {
     align-items: center;
   }
   .transactions {
-    width: 350px;
+    width: 340px;
     margin-bottom: 30px;
   }
   .transactions__list {
@@ -339,7 +322,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
   }
-  .app-body {
+  .time__body {
     width: 300px;
   }
 }
