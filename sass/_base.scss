@@ -37,22 +37,22 @@
 			}
 		}
 
-		.hamburger-inner,
-		.hamburger-inner::before,
-		.hamburger-inner::after {
+		.hamburger__inner,
+		.hamburger__inner::before,
+		.hamburger__inner::after {
 			background-color: $hamburger-active-layer-color;
 		}
 	}
 }
 
-.hamburger-box {
+.hamburger__box {
 	width: $hamburger-layer-width;
 	height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
 	display: inline-block;
 	position: relative;
 }
 
-.hamburger-inner {
+.hamburger__inner {
 	display: block;
 	top: 50%;
 	margin-top: math.div($hamburger-layer-height, -2);

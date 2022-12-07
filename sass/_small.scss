@@ -1,0 +1,21 @@
+@media (max-width: 576px) {
+	main {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	.transactions {
+		width: 350px;
+		margin-bottom: 30px;
+		&__list {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+	.app-body {
+		width: 300px;
+	}
+}

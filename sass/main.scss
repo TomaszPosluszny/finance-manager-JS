@@ -7,14 +7,15 @@
 	margin: 0;
 	padding: 0;
 }
-html {
-	font-size: 62.5%;
-	scroll-behavior: smooth;
-}
+
 body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	font-family: 'Cinzel', serif;
 	font-family: 'Raleway', sans-serif;
-	font-size: 1.6rm;
+	font-size: 16px;
 	color: $white;
 	background-color: $white;
 }
@@ -23,43 +24,38 @@ nav {
 	background-color: $dark;
 }
 h1.header__name-company {
-	margin-bottom: 0, 5em;
-	font-size: 2rem;
+	margin-bottom: 10px;
+	font-size: 36px;
 	font-family: 'Cinzel', serif;
 	color: $gold;
 }
 
 .footer {
-	width: 100%;
 	color: $white;
 	background-color: $dark;
-	&__box-title {
-		margin-bottom: 1em;
-		font-size: 3rem;
-		text-transform: uppercase;
+	flex-grow: 1;
+	&__boxes {
+		margin-top: 20px;
+		text-align: center;
+		font-size: 25px;
 	}
-
 	&__box-social {
-		margin: 2em 0 1em;
+		margin: 15px 13px;
+		text-align: center;
 	}
 	&__box-link {
 		color: $white;
-		font-size: 3.6rem;
+		font-size: 35px;
 	}
 	&__bottom-text {
-		padding: 2em;
-		font-size: 1.1em;
+		padding: 6px;
+		margin-bottom: 30px;
+		font-size: 15px;
 		text-align: center;
 	}
-	p {
-		font-size: 1.5em;
-	}
-}
-.wrapper {
-	padding: 6em 2em 2em;
 }
 
-.nav__mobile {
+.mobile {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -119,17 +115,11 @@ h1.header__name-company {
 	z-index: 500;
 	display: block;
 	background-color: #fff;
-
-	&-inner {
-		background-color: white;
-		z-index: 500;
-	}
 }
 
-.nav__deskop {
+.deskop {
 	display: none;
 }
-
+@import './menager';
 @import './small';
 @import './large';
-@import './menager';

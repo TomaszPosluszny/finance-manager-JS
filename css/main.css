@@ -6,15 +6,14 @@
   padding: 0;
 }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Cinzel", serif;
   font-family: "Raleway", sans-serif;
-  font-size: 1.6rm;
+  font-size: 16px;
   color: #fff;
   background-color: #fff;
 }
@@ -24,43 +23,38 @@ nav {
 }
 
 h1.header__name-company {
-  margin-bottom: 0, 5em;
-  font-size: 2rem;
+  margin-bottom: 10px;
+  font-size: 36px;
   font-family: "Cinzel", serif;
   color: #d6c78e;
 }
 
 .footer {
-  width: 100%;
   color: #fff;
   background-color: #232323;
+  flex-grow: 1;
 }
-.footer__box-title {
-  margin-bottom: 1em;
-  font-size: 3rem;
-  text-transform: uppercase;
+.footer__boxes {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
 }
 .footer__box-social {
-  margin: 2em 0 1em;
+  margin: 15px 13px;
+  text-align: center;
 }
 .footer__box-link {
   color: #fff;
-  font-size: 3.6rem;
+  font-size: 35px;
 }
 .footer__bottom-text {
-  padding: 2em;
-  font-size: 1.1em;
+  padding: 6px;
+  margin-bottom: 30px;
+  font-size: 15px;
   text-align: center;
 }
-.footer p {
-  font-size: 1.5em;
-}
 
-.wrapper {
-  padding: 6em 2em 2em;
-}
-
-.nav__mobile {
+.mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,10 +69,10 @@ h1.header__name-company {
   transition: transform 0.3s;
   z-index: 10;
 }
-.nav__mobile--acvite {
+.mobile--acvite {
   transform: translateX(0);
 }
-.nav__mobile__link {
+.mobile__link {
   position: relative;
   display: inline-block;
   margin: 0.5em;
@@ -120,62 +114,12 @@ h1.header__name-company {
   display: block;
   background-color: #fff;
 }
-.hamburger-inner {
-  background-color: white;
-  z-index: 500;
-}
 
-.nav__deskop {
+.deskop {
   display: none;
 }
 
-@media (min-width: 900px) {
-  .nav__deskop {
-    display: flex;
-    justify-content: space-around;
-  }
-  .deskop__link {
-    position: relative;
-    display: inline-block;
-    margin: 0.5em;
-    padding: 0.5em;
-    font-size: 2.9;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .deskop__link--border {
-    position: relative;
-    display: inline-block;
-    margin: 0.5em;
-    padding: 0.5em;
-    font-size: 2.9;
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.3s;
-    border: 1px solid #d6c78e;
-  }
-  .deskop__link:hover {
-    color: #d6c78e;
-  }
-  .deskop__link::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 100%;
-    height: 100%;
-    border: 1px solid #d6c78e;
-    opacity: 0;
-  }
-  .hamburger {
-    display: none;
-  }
-}
 body {
-  min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   color: #191919;
   background-color: #fff;
@@ -184,6 +128,7 @@ body {
 main {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: flex-start;
 }
 
@@ -192,11 +137,16 @@ main {
   margin-bottom: 30px;
   margin-top: 20px;
   margin-right: 20px;
-  width: 400px;
+  margin-left: 20px;
+  width: 300px;
   border: 1px solid #191919;
 }
+.wallet__title {
+  text-align: center;
+  margin: 10px;
+}
 .wallet__money {
-  margin-top: -10px;
+  margin-top: 10px;
   text-align: center;
   font-size: 60px;
 }
@@ -237,13 +187,16 @@ main {
 
 .transactions {
   width: 1200px;
+  margin-bottom: 30px;
 }
 .transactions__title {
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
   font-size: 36px;
-  font-weight: 200;
 }
 .transactions__list {
   display: flex;
@@ -251,7 +204,7 @@ main {
 
 .area {
   margin: 0 20px;
-  padding: 30px;
+  padding: 5px;
   width: 50%;
   border: 1px solid #191919;
 }
@@ -283,5 +236,156 @@ main {
     font-weight: bold;
     color: #333;
     transition: color 0.3s;
+  }
+}
+.time {
+  padding-top: 20px;
+  position: relative;
+}
+.time__body {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 400px;
+  border: 1px solid #191919;
+}
+.time__txt {
+  position: relative;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+}
+.time__btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 5px;
+  font-size: 32px;
+  background-color: #f9f9f9;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.time__section {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  background-color: #fff;
+  z-index: 100;
+}
+.time__cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.time__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 0;
+  width: 218%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.time__card--title {
+  text-align: center;
+}
+.time__number {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 50px 30px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 8px;
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+@media (max-width: 576px) {
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .transactions {
+    width: 350px;
+    margin-bottom: 30px;
+  }
+  .transactions__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .app-body {
+    width: 300px;
+  }
+}
+@media (min-width: 900px) {
+  .deskop {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .deskop__link {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    padding: 4px;
+    font-size: 2.9;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .deskop__link--border {
+    position: relative;
+    display: inline-block;
+    margin: 4px;
+    padding: 4px;
+    font-size: 2.9;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+    border: 1px solid #d6c78e;
+  }
+  .deskop__link:hover {
+    color: #d6c78e;
+  }
+  .deskop__link::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d6c78e;
+    opacity: 0;
+  }
+  .hamburger {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

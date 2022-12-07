@@ -1,42 +1,43 @@
 @media (min-width: 900px) {
-	.nav__deskop {
+	.deskop {
+		padding-top: 10px;
 		display: flex;
 		justify-content: space-around;
-	}
-	.deskop__link {
-		position: relative;
-		display: inline-block;
-		margin: 0.5em;
-		padding: 0.5em;
-		font-size: 2.9;
-		color: $white;
-		text-transform: uppercase;
-		text-decoration: none;
-		transition: color 0.3s;
-		&--border {
+		&__link {
 			position: relative;
 			display: inline-block;
-			margin: 0.5em;
-			padding: 0.5em;
+			margin: 4px;
+			padding:4px;
 			font-size: 2.9;
 			color: $white;
 			text-transform: uppercase;
 			text-decoration: none;
 			transition: color 0.3s;
-			border: 1px solid $gold;
-		}
-		&:hover {
-			color: $gold;
-		}
-		&::before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			content: '';
-			width: 100%;
-			height: 100%;
-			border: 1px solid $gold;
-			opacity: 0;
+			&--border {
+				position: relative;
+				display: inline-block;
+				margin: 4px;
+				padding: 4px;
+				font-size: 2.9;
+				color: $white;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: color 0.3s;
+				border: 1px solid $gold;
+			}
+			&:hover {
+				color: $gold;
+			}
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: '';
+				width: 100%;
+				height: 100%;
+				border: 1px solid $gold;
+				opacity: 0;
+			}
 		}
 	}
 	.hamburger {

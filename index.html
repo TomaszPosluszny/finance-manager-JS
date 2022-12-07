@@ -17,24 +17,20 @@
 		<link rel="stylesheet" href="./css/hamburger.css" />
 	</head>
 	<body>
-		<header class="header">
 			<button class="hamburger" type="button">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
+				<span class="hamburger__box">
+					<span class="hamburger__inner"></span>
 				</span>
 			</button>
-		</header>
-
-		<nav class="nav__mobile">
+		<nav class="mobile">
 			<a class="mobile__link" href="#menadzer">Menadżer</a>
 			<a class="mobile__link" href="#planer">Planer</a>
 			<a class="mobile__link" href="#notatnik">Notatnik</a>
 			<a class="mobile__link" href="#konto.">Załóż konto</a>
 			<a class="mobile__link" href="#konto">Zaloguj</a>
 		</nav>
-		<nav class="nav__deskop">
+		<nav class="deskop">
 			<h1 class="header__name-company">Ogarniam finanse</h1>
-			<!-- <p>Menadżer finansów</p> -->
 
 			<a class="deskop__link" href="#menadzer">Menadżer</a>
 			<a class="deskop__link" href="#planer">Planer</a>
@@ -44,7 +40,7 @@
 				<a class="deskop__link--border" href="#konto">Zaloguj</a>
 			</div>
 		</nav>
-
+	
 		<main>
 			<section class="wallet">
 				<div>
@@ -55,9 +51,37 @@
 					<button class="wallet__controls--add"><i class="fas fa-plus"></i> Dodaj transakcję</button>
 					<button class="wallet__controls--delete"><i class="far fa-trash-alt"></i> Usuń wszystko</button>
 			</section>
-			
+			<div class="time">
+
+    <div class="time__body">
+        <div class="time__txt">
+            <div class="time__btn"><i class="fas fa-sliders-h"></i></div>
+        </div>
+        <div class="time__section">
+            <h3><span class="event">Płatność</span> za:</h3>
+            <div class="time__cards">
+                <div class="time__card">
+                    <p class="time__days time__number">1</p>
+                    <p class="time__card--title">Dni</p>
+                </div>
+                <div class="time__card">
+                    <p class="time__hours time__number">23</p>
+                    <p class="time__card--title">Godzin</p>
+                </div>
+                <div class="time__card">
+                    <p class="time__minutes time__number">48</p>
+                    <p class="time__card--title">Minut</p>
+                </div>
+                <div class="time__card">
+                    <p class="time__seconds time__number">35</p>
+                    <p class="time__card--title">Sekund</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 		</main>
-			<main>
+			<main class="tran">
 			<section class="transactions">
 				<h2 class="transactions__title">Lista transakcji</h2>
 				<div class="transactions__list">
@@ -70,13 +94,7 @@
 				</div>
 			</section></main>
 		<footer class="footer">
-			<div class="wrapper">
-				<div class="fotter__boxes">
-					<div class="footter__boxes">
-						<h3 class="footer__box-title">
-							<i class="fas fa-kiwi-bird"></i>OG Co.
-						</h3>
-						<p>Ogarniam finanse to profesionalny menadżer wydatków</p>
+						<p class="footer__boxes">Ogarniam finanse to profesionalny menadżer wydatków</p>
 						<div class="footer__box-social">
 							<a href="#" class="footer__box-link"
 								><i class="fab fa-twitter-square"></i
@@ -87,14 +105,10 @@
 							<a href="#" class="footer__box-link"
 								><i class="fab fa-instagram"></i
 							></a>
-						</div>
-					</div>
 				</div>
-			</div>
-			<hr />
-			<!-- <p class="footer__bottom-text">
-				&copy;<span class="footer__year"></span>Ogarniam Finanse
-			</p> -->
+				<p class="footer__bottom-text">
+					&copy;<span class="footer__year"></span>Ogarniam Finanse 2022
+				</p>
 		</footer>
 		<script src="js/main.js"></script>
 	</body>
