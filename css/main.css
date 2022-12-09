@@ -240,7 +240,6 @@ main {
 }
 .time {
   padding-top: 20px;
-  position: relative;
 }
 .time__body {
   margin: 10px 10px;
@@ -248,21 +247,13 @@ main {
   width: 400px;
   border: 1px solid #191919;
 }
-.time__txt {
-  position: relative;
-  height: 90px;
-  background-size: cover;
-  background-position: center;
-}
 .time__btn {
-  position: absolute;
+  width: 10px;
   top: 5px;
   right: 5px;
   padding: 5px 5px;
   font-size: 32px;
-  background-color: #f9f9f9;
-  border: 1px solid #333;
-  border-radius: 5px;
+  background-color: #fff;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -303,6 +294,68 @@ main {
 h3 {
   font-size: 24px;
   text-align: center;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 50px 30px;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 8px;
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+.addtransaction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: #232323;
+}
+.addtransaction label {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.addtransaction input {
+  width: 300px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  font-size: 18px;
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.panel-buttons button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  margin: 0 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.panel-buttons button:hover {
+  background-color: #fff;
+  color: #232323;
 }
 
 @media (max-width: 576px) {
