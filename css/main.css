@@ -296,24 +296,7 @@ h3 {
   text-align: center;
 }
 
-.settings {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 50px 30px;
-  width: 200px;
-  background-color: #fff;
-  border: 1px solid black;
-  border-radius: 8px;
-  opacity: 0;
-  transition: transform 0.5s, opacity 0.3s;
-}
-
-.addtransaction {
+.add {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -321,12 +304,12 @@ h3 {
   color: #fff;
   background-color: #232323;
 }
-.addtransaction label {
+.add label {
   margin-top: 40px;
   margin-bottom: 5px;
   font-size: 24px;
 }
-.addtransaction input {
+.add input {
   width: 300px;
   padding: 10px 20px;
   border: 1px solid black;
@@ -334,13 +317,13 @@ h3 {
   font-size: 18px;
 }
 
-.panel-buttons {
+.buttons {
   display: flex;
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.panel-buttons button {
+.buttons button {
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 1px;
@@ -353,9 +336,18 @@ h3 {
   cursor: pointer;
   transition: background-color 0.2s;
 }
-.panel-buttons button:hover {
+.buttons button:hover {
   background-color: #fff;
   color: #232323;
+}
+
+.date {
+  text-align: center;
+}
+.date input {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  width: 100px;
 }
 
 @media (max-width: 576px) {

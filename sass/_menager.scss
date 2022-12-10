@@ -181,23 +181,7 @@ h3 {
 	text-align: center;
 }
 
-.settings {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	padding: 50px 30px;
-	width: 200px;
-	background-color: #fff;
-	border: 1px solid black;
-	border-radius: 8px;
-	opacity: 0;
-	transition: transform 0.5s, opacity 0.3s;
-}
-.addtransaction {
+.add{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -219,7 +203,7 @@ h3 {
 	}
 }
 
-.panel-buttons {
+.buttons {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
@@ -244,4 +228,12 @@ h3 {
 		color: $dark;
 	}
 }
+.date {
+	text-align: center;
 
+	input {
+		margin-bottom: 30px;
+		padding: 10px 20px;
+		width: 100px;
+	}
+}
