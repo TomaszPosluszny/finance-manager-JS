@@ -163,6 +163,7 @@ main {
   background: none;
   transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
+  text-decoration: none;
 }
 .wallet__controls--delete {
   padding: 12px 20px;
@@ -172,6 +173,7 @@ main {
   background: none;
   transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
+  text-decoration: none;
 }
 .wallet__controls--delete:hover {
   color: #fff;
@@ -297,7 +299,8 @@ h3 {
 }
 
 .add {
-  display: flex;
+  display: none;
+  position: absolute;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -310,6 +313,52 @@ h3 {
   font-size: 24px;
 }
 .add input {
+  width: 300px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.buttons button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  margin: 0 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #232323;
+}
+
+.data {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: #232323;
+}
+.data label {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.data input {
   width: 300px;
   padding: 10px 20px;
   border: 1px solid black;
