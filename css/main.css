@@ -301,6 +301,7 @@ h3 {
 .add {
   display: none;
   position: absolute;
+  margin-top: 40px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -347,6 +348,7 @@ h3 {
 .data {
   display: none;
   position: absolute;
+  margin-top: 40px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
