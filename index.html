@@ -11,7 +11,7 @@
 		</script>
 		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@200;400;900&display=swap"rel="stylesheet"/>
 		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/hamburger.css" />
+		<link rel="stylesheet" href="./css/hamburger.css" />przychód
 	</head>
 	<body>
 		<button class="hamburger" type="button">
@@ -43,7 +43,7 @@
 					<p class="wallet__money">0zł</p>
 				</div>
 				<div class="wallet__controls">
-					<button class="wallet__controls--add"><link rel="stylesheet" href="fds"><i class="fas fa-plus"></i> Dodaj transakcję</button>
+					<button class="wallet__controls--add"><link rel="stylesheet"><i class="fas fa-plus"></i> Dodaj transakcję</button>
 					<button class="wallet__controls--delete"><i class="far fa-trash-alt"></i> Usuń wszystko</button>
 				</div>
 			</section>
@@ -77,9 +77,9 @@
 				<label for="add__name">Nazwa transakcji:</label>
 				<input type="text" id="name"></input>
 				<label for="add__amount">Przychód:</label>
-				<input type="number" id="amount">
+				<input type="number" id="income">
 				<label for="category">Wydatek:</label>
-				<input type="add__number" id="amount">
+				<input type="number" id="expenses">
 				<div class="buttons">
 					<button class="buttons__save"><i class="fas fa-save"></i> Zapisz</button>
 					<button class="buttons__cancel"><i class="far fa-window-close"></i> Anuluj</button>
@@ -106,15 +106,25 @@
 				</div>
 			</div>
 		</main>
-		<main class="tran">
+		<main>
 			<section class="transactions">
 				<h2 class="transactions__title">Lista transakcji</h2>
 				<div class="transactions__list">
 					<div class="area">
 						<h3 class="area__income">Przychody:</h3>
+						<div class="transaction" id="0">
+							<p class="transaction__name"> Wypłata</p>
+							<p class="transaction__amount">2000zł <button class="transaction__delete"><i
+										class="fas fa-times"></i></button></p>
+						</div>
 					</div>
 					<div class="area">
-						<h3 class="area__expenses">Wydatki:</h>
+						<h3 class="area__expenses">Wydatki:</h3>
+						<div class="transaction" id="1">
+							<p class="transaction__name"> Jedzenie</p>
+							<p class="transaction__amount">500zł <button class="transaction__delete"><i
+											class="fas fa-times"></i></button></p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -128,6 +138,6 @@
 			</div>
 			<p class="footer__bottom-text"> &copy;<span class="footer__year"></span>Ogarniam Finanse 2022</p>
 		</footer>
-		<script src="js/main.js"></script>
+		<script type="module" src="js/main.js"></script>
 	</body>
 </html>

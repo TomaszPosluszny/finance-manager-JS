@@ -66,7 +66,10 @@ main {
 		}
 	}
 }
-
+.tran {
+	display: flex;
+	justify-content: center;
+}
 .transactions {
 	width: 1200px;
 	margin-bottom: 30px;
@@ -74,7 +77,6 @@ main {
 	&__title {
 		display: flex;
 		justify-content: center;
-
 		align-items: flex-start;
 		padding-bottom: 20px;
 		text-align: center;
@@ -107,6 +109,31 @@ main {
 		text-align: center;
 	}
 }
+.transaction {
+	padding: 10px 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	&__delete {
+		margin-left: 10px;
+		background: none;
+		border: none;
+		font-size: 18px;
+		color: black;
+		cursor: pointer;
+		transition: transform 0.3s;
+	}
+
+	&__delete:hover {
+		transform: scale(0.8);}
+	&__name {
+		font-size: 18px;
+	}
+}
+
+
 @media (min-width: 768px) {
 	.burger-icon {
 		display: none;
@@ -183,7 +210,7 @@ h3 {
 	text-align: center;
 }
 
-.add{
+.add {
 	display: none;
 	position: absolute;
 	margin-top: 40px;
@@ -232,7 +259,7 @@ h3 {
 		color: $dark;
 	}
 }
-.data{
+.data {
 	display: none;
 	position: absolute;
 	margin-top: 40px;

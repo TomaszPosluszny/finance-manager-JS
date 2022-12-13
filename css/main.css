@@ -187,6 +187,11 @@ main {
   margin-right: 10px;
 }
 
+.tran {
+  display: flex;
+  justify-content: center;
+}
+
 .transactions {
   width: 1200px;
   margin-bottom: 30px;
@@ -222,6 +227,30 @@ main {
   margin-bottom: 30px;
   font-size: 28px;
   text-align: center;
+}
+
+.transaction {
+  padding: 10px 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.transaction__delete {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.transaction__delete:hover {
+  transform: scale(0.8);
+}
+.transaction__name {
+  font-size: 18px;
 }
 
 @media (min-width: 768px) {
