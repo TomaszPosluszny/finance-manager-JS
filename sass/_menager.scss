@@ -127,12 +127,15 @@ main {
 	}
 
 	&__delete:hover {
-		transform: scale(0.8);}
+		transform: scale(0.8);
+	}
 	&__name {
 		font-size: 18px;
 	}
 }
-
+.transaction:last-child {
+    border-bottom: none;
+}
 
 @media (min-width: 768px) {
 	.burger-icon {
@@ -213,12 +216,18 @@ h3 {
 .add {
 	display: none;
 	position: absolute;
-	margin-top: 40px;
+	margin-top: 30px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	color: #fff;
 	background-color: $dark;
+	&__error {
+		display: none;
+		margin-top: 15px;
+		color: white;
+		background-color: $dark;
+	}
 
 	label {
 		margin-top: 40px;

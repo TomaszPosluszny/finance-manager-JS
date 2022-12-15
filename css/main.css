@@ -253,6 +253,10 @@ main {
   font-size: 18px;
 }
 
+.transaction:last-child {
+  border-bottom: none;
+}
+
 @media (min-width: 768px) {
   .burger-icon {
     display: none;
@@ -330,11 +334,17 @@ h3 {
 .add {
   display: none;
   position: absolute;
-  margin-top: 40px;
+  margin-top: 30px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #fff;
+  background-color: #232323;
+}
+.add__error {
+  display: none;
+  margin-top: 15px;
+  color: white;
   background-color: #232323;
 }
 .add label {
