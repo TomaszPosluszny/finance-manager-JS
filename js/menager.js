@@ -1,5 +1,5 @@
-const income = document.querySelector('.area');
-const expenses = document.querySelector('.area__expenses');
+const income = document.querySelector('.areaplus');
+const expenses = document.querySelector('.areaminus');
 const walletMoney = document.querySelector('.wallet__money');
 const addTransaction = document.querySelector('.add');
 
@@ -16,7 +16,8 @@ const cancelBtn = document.querySelector('.buttons__cancel');
 const saveBtn = document.querySelector('.buttons__save');
 const deleteBtn = document.querySelector('.transaction__delete');
 
-let moneyArr =[0];
+let moneyArrIncome = [0];
+let moneyArrExpenses = [0];
 let ID = 0;
 let root = document.documentElement;
 
@@ -42,8 +43,12 @@ const checkInput = () => {
 		(nameInput.value !== '' && incomeInput.value !== '') ||
 		expensesInput.value !== ''
 	) {
-		newTransaction();
-        deleteError()
+		if (incomeInput.value !== '') {
+			newTransactionIncome();
+		} else {
+			newTransactionExpenses();
+		}
+		deleteError();
 	} else {
 		addError();
 	}
@@ -54,20 +59,51 @@ const clearValue = () => {
 	expensesInput.value = '';
 };
 
-const newTransaction = () => {
-	const transaction = document.createElement('div');
-	transaction.classList.add('transaction');
-    transaction.setAttribute('id', ID);
-	transaction.innerHTML = `<p class="transaction__name"> ${nameInput.value}</p>
-<p class="transaction__amount">${incomeInput.value} 
-<button class="transaction__delete" onclick "deleteTransaction (${ID})"><i class="fas fa-times"></i></button></p>`
-income.appendChild(transaction) && transaction.classList.add('income')
-moneyArr.push(parseFloat(incomeInput.value));
-closeTransaction();
-ID++;
-clearValue();
-
+const newTransactionIncome = () => {
+	const transactionIncome = document.createElement('div');
+	transactionIncome.classList.add('transaction');
+	transactionIncome.setAttribute('id', ID);
+	transactionIncome.innerHTML = `<p class="transaction__name"> ${nameInput.value}</p>
+<p class="transaction__amount">${incomeInput.value} zł
+<button class="transaction__delete" onclick "deleteTransaction (${ID})"><i class="fas fa-times"></i></button></p>`;
+	income.appendChild(transactionIncome) &&
+		transactionIncome.classList.add('income');
+        moneyArrIncome.push(parseFloat(incomeInput.value));
+	sumMoneyIncome(moneyArrIncome);
+    
+	closeTransaction();
+	ID++;
+	clearValue();
 };
+
+const newTransactionExpenses = () => {
+	const transactionExpenses = document.createElement('div');
+	transactionExpenses.classList.add('transaction');
+	transactionExpenses.setAttribute('id', ID);
+	transactionExpenses.innerHTML = `<p class="transaction__name"> ${nameInput.value}</p>
+<p class="transaction__amount">${expensesInput.value} zł
+<button class="transaction__delete" onclick "deleteTransaction (${ID})"><i class="fas fa-times"></i></button></p>`;
+	expenses.appendChild(transactionExpenses) &&
+		transactionExpenses.classList.add('expenses');
+        moneyArrExpenses.push(parseFloat(expensesInput.value));
+	sumMoneyExpenses(moneyArrExpenses);
+   
+	closeTransaction();
+	ID++;
+	clearValue();
+};
+
+const sumMoneyIncome = (moneyIncome, moneyExpenses) => {
+	const newMoneyIncome = moneyIncome.reduce((a, b) => a + b);
+    
+	walletMoney.textContent = `${newMoneyIncome}zł`;
+};
+const sumMoneyExpenses = (moneyExpenses) => {
+	let newMoneyExpenses = moneyExpenses.reduce((a, b) => a + b);
+	walletMoney.textContent = `${newMoneyExpenses}zł`;
+    console.log(newMoneyExpenses);
+};
+
 
 saveBtn.addEventListener('click', checkInput);
 walletControlAddBtn.addEventListener('click', showTransaction);

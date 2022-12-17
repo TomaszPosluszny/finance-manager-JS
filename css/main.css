@@ -209,21 +209,30 @@ main {
   display: flex;
 }
 
-.area {
+.areaplus {
   margin: 0 20px;
   padding: 5px;
   width: 50%;
   border: 1px solid #191919;
 }
-.area__income {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+.areaplus__income {
   margin-bottom: 30px;
   font-size: 28px;
   text-align: center;
 }
-.area__expenses {
+.areaplus__expenses {
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.areaminus {
+  margin: 0 20px;
+  padding: 5px;
+  width: 50%;
+  border: 1px solid #191919;
+}
+.areaminus__expenses {
   margin-bottom: 30px;
   font-size: 28px;
   text-align: center;

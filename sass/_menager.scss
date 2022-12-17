@@ -90,19 +90,27 @@ main {
 		// align-items: flex-start;
 	}
 }
-.area {
+.areaplus {
 	margin: 0 20px;
 	padding: 5px;
 	width: 50%;
 	border: 1px solid $darker;
 	&__income {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
 		margin-bottom: 30px;
 		font-size: 28px;
 		text-align: center;
 	}
+	&__expenses {
+		margin-bottom: 30px;
+		font-size: 28px;
+		text-align: center;
+	}
+}
+.areaminus {
+	margin: 0 20px;
+	padding: 5px;
+	width: 50%;
+	border: 1px solid $darker;
 	&__expenses {
 		margin-bottom: 30px;
 		font-size: 28px;
@@ -134,7 +142,7 @@ main {
 	}
 }
 .transaction:last-child {
-    border-bottom: none;
+	border-bottom: none;
 }
 
 @media (min-width: 768px) {
