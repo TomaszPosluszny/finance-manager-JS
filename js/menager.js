@@ -2,6 +2,8 @@ const income = document.querySelector('.areaplus');
 const expenses = document.querySelector('.areaminus');
 const walletMoney = document.querySelector('.wallet__money');
 const addTransaction = document.querySelector('.add');
+const areaPlus = document.querySelector('.areaplus__income--green');
+const areaMinus = document.querySelector('.areaminus__expenses--red');
 
 const nameInput = document.querySelector('#name');
 const incomeInput = document.querySelector('#income');
@@ -16,8 +18,7 @@ const cancelBtn = document.querySelector('.buttons__cancel');
 const saveBtn = document.querySelector('.buttons__save');
 const deleteBtn = document.querySelector('.transaction__delete');
 
-let moneyArrIncome = [0];
-let moneyArrExpenses = [0];
+let moneyArr = [0];
 let ID = 0;
 let root = document.documentElement;
 
@@ -68,9 +69,8 @@ const newTransactionIncome = () => {
 <button class="transaction__delete" onclick "deleteTransaction (${ID})"><i class="fas fa-times"></i></button></p>`;
 	income.appendChild(transactionIncome) &&
 		transactionIncome.classList.add('income');
-        moneyArrIncome.push(parseFloat(incomeInput.value));
-	sumMoneyIncome(moneyArrIncome);
-    
+	moneyArr.push(parseFloat(incomeInput.value));
+	sumMoney(moneyArr);
 	closeTransaction();
 	ID++;
 	clearValue();
@@ -85,25 +85,17 @@ const newTransactionExpenses = () => {
 <button class="transaction__delete" onclick "deleteTransaction (${ID})"><i class="fas fa-times"></i></button></p>`;
 	expenses.appendChild(transactionExpenses) &&
 		transactionExpenses.classList.add('expenses');
-        moneyArrExpenses.push(parseFloat(expensesInput.value));
-	sumMoneyExpenses(moneyArrExpenses);
-   
+	moneyArr.push(parseFloat(-expensesInput.value));
+	sumMoney(moneyArr);
 	closeTransaction();
 	ID++;
 	clearValue();
 };
 
-const sumMoneyIncome = (moneyIncome, moneyExpenses) => {
-	const newMoneyIncome = moneyIncome.reduce((a, b) => a + b);
-    
-	walletMoney.textContent = `${newMoneyIncome}zł`;
+const sumMoney = (moneyArr) => {
+	let newMoney = moneyArr.reduce((a, b) => a + b);
+	walletMoney.textContent = `${newMoney} zł`;
 };
-const sumMoneyExpenses = (moneyExpenses) => {
-	let newMoneyExpenses = moneyExpenses.reduce((a, b) => a + b);
-	walletMoney.textContent = `${newMoneyExpenses}zł`;
-    console.log(newMoneyExpenses);
-};
-
 
 saveBtn.addEventListener('click', checkInput);
 walletControlAddBtn.addEventListener('click', showTransaction);
