@@ -81,6 +81,7 @@ const newTransactionExpenses = () => {
 	moneyArr.push(parseFloat(-expensesInput.value));
 	sumMoney(moneyArr);
 	closeTransaction();
+	
 	clearValue();
 };
 
