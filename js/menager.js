@@ -18,8 +18,11 @@ const cancelBtn = document.querySelector('.buttons__cancel');
 const saveBtn = document.querySelector('.buttons__save');
 const deleteBtn = document.querySelector('.transaction__delete');
 
-let moneyArr = [0];
+const exchangeRate = document.querySelector('.exchange__rate');
+const exchangeMoney = document.querySelector('.exchange__money');
+const exchangeChoose = document.querySelector('.exchange__choose');
 
+let moneyArr = [0];
 
 const showTransaction = () => {
 	addTransaction.style.display = 'flex';
@@ -64,7 +67,7 @@ const newTransactionIncome = () => {
 	transactionIncome.classList.add('transaction');
 	transactionIncome.innerHTML = `<p class="transaction__name"> ${nameInput.value}</p>
 <p class="transaction__amount">${incomeInput.value} zł`;
-	income.appendChild(transactionIncome)
+	income.appendChild(transactionIncome);
 	moneyArr.push(parseFloat(incomeInput.value));
 	sumMoney(moneyArr);
 	closeTransaction();
@@ -77,27 +80,56 @@ const newTransactionExpenses = () => {
 	transactionExpenses.innerHTML = `<p class="transaction__name"> ${nameInput.value}</p>
 <p class="transaction__amount">${expensesInput.value} zł`;
 
-	expenses.appendChild(transactionExpenses)
+	expenses.appendChild(transactionExpenses);
 	moneyArr.push(parseFloat(-expensesInput.value));
 	sumMoney(moneyArr);
 	closeTransaction();
-	
 	clearValue();
 };
 
 const sumMoney = (moneyArr) => {
 	let newMoney = moneyArr.reduce((a, b) => a + b);
-	walletMoney.textContent = `${newMoney} zł`;
+	walletMoney.textContent = `${newMoney} PLN`;
 
+	fetch(
+		`https://api.exchangerate.host/latest?base=PLN&symbols=EUR`
+	)
+		.then((res) => res.json())
+		.then((data) => {
+
+			const rate = data.rates.EUR;
+			let exchange = newMoney * rate;
+			exchangeMoney.textContent = `${exchange.toFixed(2)} EUR`;
+
+		});
 };
 
-
 const deleteAllTransactions = () => {
-    income.innerHTML = '<h3 class="areaplus__income">Przychody:</h3>';
-    expenses.innerHTML = '<h3 class="areaminus__expenses">Wydatki:</h3>';
-    walletMoney.textContent = '0zł'
-    moneyArr = [0];
-}
+	income.innerHTML = '<h3 class="areaplus__income">Przychody:</h3>';
+	expenses.innerHTML = '<h3 class="areaminus__expenses">Wydatki:</h3>';
+	walletMoney.textContent = '0zł';
+	moneyArr = [0];
+};
+
+// const calculate = () => {
+// 	fetch(
+// 		`https://api.exchangerate.host/latest?base=PLN&symbols=EUR`
+// 	)
+// 		.then((res) => res.json())
+// 		.then((data) => {
+// 			// const currency1 = currencyOne.value;
+// 			const currency2 = exchangeChoose.value;
+
+// 			const rate = data.rates.EUR;
+// 			exchangeRate.textContent = `1  = ${rate.toFixed(4)} EUR`;
+// 			// sumMoney(moneyArr);
+// 			// sumMoney() = walletMoney * rate;
+// 			console.log(exchangeMoney);
+// 		});
+	
+// };
+// calculate();
+console.log(exchangeMoney);
 
 saveBtn.addEventListener('click', checkInput);
 walletControlAddBtn.addEventListener('click', showTransaction);

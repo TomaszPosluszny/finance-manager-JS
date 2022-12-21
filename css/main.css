@@ -187,6 +187,19 @@ main {
   margin-right: 10px;
 }
 
+.exchange {
+  padding: 20px 20px;
+}
+.exchange__money {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 60px;
+}
+.exchange__choose {
+  margin-top: 10px;
+  margin-left: 80px;
+}
+
 .tran {
   display: flex;
   justify-content: center;
