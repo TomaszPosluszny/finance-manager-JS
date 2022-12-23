@@ -133,7 +133,7 @@ main {
 }
 
 .wallet {
-  padding: 20px 20px;
+  padding: 10px 10px;
   margin-bottom: 30px;
   margin-top: 20px;
   margin-right: 20px;
@@ -148,12 +148,12 @@ main {
 .wallet__money {
   margin-top: 10px;
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
 }
 .wallet__controls {
   display: flex;
   justify-content: space-around;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 .wallet__controls--add {
   padding: 12px 20px;
@@ -188,12 +188,12 @@ main {
 }
 
 .exchange {
-  padding: 20px 20px;
+  padding: 10px 10px;
 }
 .exchange__money {
   margin-top: 10px;
   text-align: center;
-  font-size: 60px;
+  font-size: 45px;
 }
 .exchange__choose {
   margin-top: 10px;
@@ -344,6 +344,7 @@ main {
 }
 
 h3 {
+  padding-bottom: 10px;
   font-size: 24px;
   text-align: center;
 }
@@ -410,6 +411,29 @@ h3 {
   flex-direction: column;
   color: #fff;
   background-color: #232323;
+}
+.data__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.data__buttons button {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 1px;
+  margin: 0 30px;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.data__buttons button:hover {
+  background-color: #fff;
+  color: #232323;
 }
 .data label {
   margin-top: 40px;

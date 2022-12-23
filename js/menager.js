@@ -10,17 +10,26 @@ const incomeInput = document.querySelector('#income');
 const expensesInput = document.querySelector('#expenses');
 const showError = document.querySelector('.add__error');
 
+const cancelBtn = document.querySelector('.buttons__cancel');
 const walletControlAddBtn = document.querySelector('.wallet__controls--add');
 const walletControlDeleteBtn = document.querySelector(
 	'.wallet__controls--delete'
 );
-const cancelBtn = document.querySelector('.buttons__cancel');
+
 const saveBtn = document.querySelector('.buttons__save');
 const deleteBtn = document.querySelector('.transaction__delete');
 
 const exchangeRate = document.querySelector('.exchange__rate');
 const exchangeMoney = document.querySelector('.exchange__money');
 const exchangeChoose = document.querySelector('.exchange__choose');
+
+const adDataBtn = document.querySelector('.time__btn');
+const addData = document.querySelector('.data');
+const dataBtnCancel = document.querySelector('.data__buttons--cancel');
+const dataBtnSave = document.querySelector('.data__buttons--save');
+const eventName = document.querySelector('#data__name--event');
+const eventSpan = document.querySelector('.time__event')
+
 
 let moneyArr = [0];
 
@@ -91,16 +100,12 @@ const sumMoney = (moneyArr) => {
 	let newMoney = moneyArr.reduce((a, b) => a + b);
 	walletMoney.textContent = `${newMoney} PLN`;
 
-	fetch(
-		`https://api.exchangerate.host/latest?base=PLN&symbols=EUR`
-	)
+	fetch(`https://api.exchangerate.host/latest?base=PLN&symbols=EUR`)
 		.then((res) => res.json())
 		.then((data) => {
-
 			const rate = data.rates.EUR;
 			let exchange = newMoney * rate;
 			exchangeMoney.textContent = `${exchange.toFixed(2)} EUR`;
-
 		});
 };
 
@@ -111,27 +116,25 @@ const deleteAllTransactions = () => {
 	moneyArr = [0];
 };
 
-// const calculate = () => {
-// 	fetch(
-// 		`https://api.exchangerate.host/latest?base=PLN&symbols=EUR`
-// 	)
-// 		.then((res) => res.json())
-// 		.then((data) => {
-// 			// const currency1 = currencyOne.value;
-// 			const currency2 = exchangeChoose.value;
+const showData = () => {
+	addData.style.display = 'flex';
+};
 
-// 			const rate = data.rates.EUR;
-// 			exchangeRate.textContent = `1  = ${rate.toFixed(4)} EUR`;
-// 			// sumMoney(moneyArr);
-// 			// sumMoney() = walletMoney * rate;
-// 			console.log(exchangeMoney);
-// 		});
-	
-// };
-// calculate();
-console.log(exchangeMoney);
+const closeData = () => {
+	addData.style.display = 'none';
+	clearValue();
+};
+
+const appUpdate = () => {
+	eventSpan.textContent = eventName.value;
+	closeData()
+};
 
 saveBtn.addEventListener('click', checkInput);
 walletControlAddBtn.addEventListener('click', showTransaction);
 cancelBtn.addEventListener('click', closeTransaction);
 walletControlDeleteBtn.addEventListener('click', deleteAllTransactions);
+
+adDataBtn.addEventListener('click', showData);
+dataBtnCancel.addEventListener('click', closeData);
+dataBtnSave.addEventListener('click', appUpdate);
