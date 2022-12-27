@@ -28,10 +28,20 @@ const addData = document.querySelector('.data');
 const dataBtnCancel = document.querySelector('.data__buttons--cancel');
 const dataBtnSave = document.querySelector('.data__buttons--save');
 const eventName = document.querySelector('#data__name--event');
+
 const eventSpan = document.querySelector('.time__event')
+const eventDay = document.querySelector('#event-day');
+const eventMonth = document.querySelector('#event-month');
+const eventYear = document.querySelector('#event-year');
+
+const daysNumber = document.querySelector('.time__days');
+const hoursNumber = document.querySelector('.time__hours');
+const minutesNumber = document.querySelector('.time__minutes');
+const secondsNumber = document.querySelector('.time__seconds');
 
 
 let moneyArr = [0];
+let changeTime;
 
 const showTransaction = () => {
 	addTransaction.style.display = 'flex';
@@ -127,8 +137,24 @@ const closeData = () => {
 
 const appUpdate = () => {
 	eventSpan.textContent = eventName.value;
+	changeTime = new Date(`${eventMonth.value} ${eventDay.value} ${eventYear.value}`);
+	console.log(changeTime);
 	closeData()
 };
+const setTime = () => {
+    const currentTime = new Date();
+    const result = changeTime - currentTime;
+
+    const days = Math.floor(result / 1000 / 60 / 60 / 24);
+    const hours = Math.floor(result / 1000 / 60 / 60) % 24;
+    const minutes = Math.floor(result / 1000 / 60) % 60;
+    const seconds = Math.floor(result / 1000) % 60;
+
+    daysNumber.textContent = days;
+    hoursNumber.textContent = hours;
+    minutesNumber.textContent = minutes;
+    secondsNumber.textContent = seconds;
+}
 
 saveBtn.addEventListener('click', checkInput);
 walletControlAddBtn.addEventListener('click', showTransaction);
@@ -138,3 +164,6 @@ walletControlDeleteBtn.addEventListener('click', deleteAllTransactions);
 adDataBtn.addEventListener('click', showData);
 dataBtnCancel.addEventListener('click', closeData);
 dataBtnSave.addEventListener('click', appUpdate);
+
+appUpdate() 
+setInterval(setTime, 1000);
