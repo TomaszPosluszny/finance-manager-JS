@@ -119,6 +119,51 @@ h1.header__name-company {
   display: none;
 }
 
+.pushbutton {
+  padding: 10px 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  width: 300px;
+}
+.pushbutton__add {
+  padding: 12px 20px;
+  margin-right: 20px;
+  color: #232323;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  background: none;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pushbutton__delete {
+  padding: 12px 20px;
+  margin-left: 20px;
+  color: #232323;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  background: none;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.pushbutton__add:hover {
+  color: #fff;
+  background-color: #232323;
+}
+.pushbutton__delete:hover {
+  color: #fff;
+  background-color: #232323;
+}
+.pushbutton i {
+  margin-right: 10px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #191919;

@@ -1,0 +1,48 @@
+
+
+.pushbutton {
+	padding: 10px 10px;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	display: flex;
+	justify-content: space-around;
+	margin: 20px 0;
+	width: 300px;
+	// border: 1px solid $darker;
+
+	&__add {
+		padding: 12px 20px;
+        margin-right: 20px;
+		color: $dark;
+		border: 1px solid $darker;
+		border-radius: 5px;
+		background: none;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&__delete {
+		padding: 12px 20px;
+        margin-left: 20px;
+		color: $dark;
+		border: 1px solid $darker;
+		border-radius: 5px;
+		background: none;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&__add:hover {
+		color: $white;
+		background-color: $dark;
+	}
+	&__delete:hover {
+		color: $white;
+		background-color: $dark;
+	}
+	i {
+		margin-right: 10px;
+	}
+}
