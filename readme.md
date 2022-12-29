@@ -4,9 +4,14 @@
 ## General info
 
 **The application contains several functionalities:**
-* Expense manager (sums up expenses and revenues)
-* Exchange rate (connection with external api)
+* Expense manager (total revenue and expenses)
+* Exchange rate (connection to external api)
 * Important expense (countdown to this event)
+
+**In the making**
+* Notebook (adding notes)
+* Planner (advanced ToDo List)
+* Form validator (login and registration)
 
 ## Technologies
 * Html
@@ -17,3 +22,4 @@
 
 
 ## Setup
+[Link to the page](https://tomaszposluszny.github.io/finance-manager/)
