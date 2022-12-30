@@ -41,8 +41,25 @@
                 <button class="pushbutton__add"><link rel="stylesheet"><i class="fas fa-plus"></i> Dodaj transakcję</button>
                 <button class="pushbutton__delete"><i class="far fa-trash-alt"></i> Usuń wszystko</button>
             </div>	
-
+			<div class="addnote">
+				<div class="addnote__error">
+					<p>Podaj nazwę oraz przychód lub wydatek</p>
+				</div>
+				<label for="addnote__name">Wybierz kategorię:</label>
+				<select id="category" onchange="selectValue()">
+					<option value="0" disabled selected>- wybierz kategorię -</option>
+					<option value="1">Zakupy</option>
+					<option value="1">Praca</option>
+					<option value="1">Inne</option>
+				</select>
+				<label for="addnote__amount">Wpisz treść:</label>
+				<textarea id="text"></textarea>
+				<div class="buttons">
+					<button class="buttons__save"><i class="fas fa-save"></i> Zapisz</button>
+					<button class="buttons__cancel"><i class="far fa-window-close"></i> Anuluj</button>
+				</div>
 		</main>
+		</div>
 		<footer class="footer">
 			<p class="footer__boxes">Ogarniam finanse to profesionalny menadżer wydatków</>
 			<div class="footer__box-social">
