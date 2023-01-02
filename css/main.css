@@ -165,7 +165,7 @@ h1.header__name-company {
 }
 
 .addnote {
-  display: flex;
+  display: none;
   position: absolute;
   margin-top: 30px;
   justify-content: center;
@@ -185,7 +185,7 @@ h1.header__name-company {
   margin-bottom: 5px;
   font-size: 24px;
 }
-.addnote input {
+.addnote select, .addnote textarea {
   width: 300px;
   padding: 10px 20px;
   border: 1px solid black;
