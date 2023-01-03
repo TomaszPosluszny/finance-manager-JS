@@ -164,6 +164,42 @@ h1.header__name-company {
   margin-right: 10px;
 }
 
+.note {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.note__area {
+  margin: 40px 20px;
+  width: 240px;
+  background-color: #232323;
+  border: 1px solid black;
+}
+.note__header {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.06);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.note__delete {
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.note__body {
+  padding: 20px 15px;
+  font-size: 14px;
+  color: #fff;
+}
+
 .addnote {
   display: none;
   position: absolute;
@@ -185,7 +221,8 @@ h1.header__name-company {
   margin-bottom: 5px;
   font-size: 24px;
 }
-.addnote select, .addnote textarea {
+.addnote select,
+.addnote textarea {
   width: 300px;
   padding: 10px 20px;
   border: 1px solid black;
