@@ -7,9 +7,9 @@
 * Expense manager (total revenue and expenses)
 * Exchange rate (connection to external api)
 * Important expense (countdown to this event)
+* Notebook (adding notes)
 
 **In the making**
-* Notebook (adding notes)
 * Planner (advanced ToDo List)
 * Form validator (login and registration)
 
