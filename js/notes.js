@@ -1,7 +1,7 @@
 const addBtn = document.querySelector('.pushbutton__add');
 const saveNote = document.querySelector('.buttons__save');
 const cancelNote = document.querySelector('.buttons__cancel');
-const deleteBtn = document.getElementsByClassName('pushbutton__delete');
+const deleteBtn = document.querySelector('.pushbutton__delete');
 
 const notePanel = document.querySelector('.addnote');
 const error = document.querySelector('.addnote__error');
@@ -55,7 +55,7 @@ const createNote = () => {
         </div>
         <div class="note__body">
             ${textarea.value}
-        </div>  
+        </div>
     `
 
     noteArea.appendChild(newNote);
@@ -63,14 +63,39 @@ const createNote = () => {
     textarea.value = '';
     category.selectedIndex = 0;
     notePanel.style.display = 'none';
-   
+    checkColor(newNote);
 }
 
 const selectValue = () => {
     selectedValue = category.options[category.selectedIndex].text;
 }
+const checkColor = (note) => {
+	switch (selectedValue) {
+		case 'Zakupy':
+			note.style.backgroundColor = 'rgb(146,133,133)';
+			break;
+		case 'Praca':
+			note.style.backgroundColor = 'rgb(127,120,120)';
+			break;
+		case 'Inne':
+			note.style.backgroundColor = 'rgb(107,102,102)';
+			break;
+            case 'Hobby':
+			note.style.backgroundColor = 'rgb(65,65,65)';
+			break;
+	}
+};
+const deleteNote = (id) => {
+	const noteToDelete = document.getElementById(id);
+	noteArea.removeChild(noteToDelete);
+};
 
-selectValue()
+const deleteAllNotes = () => {
+	noteArea.textContent = '';
+};
+
+
 addBtn.addEventListener('click', showPanel);
 cancelNote.addEventListener('click', closePanel);
 saveNote.addEventListener('click', addNote);
+deleteBtn.addEventListener('click', deleteAllNotes);

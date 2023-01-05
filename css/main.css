@@ -174,7 +174,6 @@ h1.header__name-company {
   margin: 40px 20px;
   width: 240px;
   background-color: #232323;
-  border: 1px solid black;
 }
 .note__header {
   display: flex;
