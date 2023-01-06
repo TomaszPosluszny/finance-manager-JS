@@ -1,0 +1,135 @@
+
+h1 {
+	margin-bottom: 20px;
+	color: black;
+	text-transform: uppercase;
+}
+
+.list {
+	width: 400px;
+	text-align: center;
+	background: #fff;
+	border-radius: 5px;
+	&__header {
+		padding: 40px;
+	}
+	&__input {
+		padding: 10px 20px;
+		margin-right: 20px;
+		border: 1px solid $darker;
+		color: var(--light-dark);
+		background-color: white;
+	}
+	&__btn {
+		padding: 10px 22px;
+		border: 1px solid $darker;
+		border-radius: 5px;
+		color: black;
+		background-color: white;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	&__btn:hover {
+		color: white;
+		background-color: black;
+	}
+}
+
+.todo {
+	padding: 20px 0;
+	h3 {
+		text-transform: uppercase;
+		margin-bottom: 16px;
+	}
+	li {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 15px;
+		padding-left: 20px;
+		list-style: none;
+		background-color: white;
+	}
+	&__alert {
+		margin-top: 20px;
+		color: black;
+	}
+	&__tools {
+		display: inline-block;
+		button {
+			padding: 15px 10px;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		button:hover {
+			color: white;
+			background-color: black;
+		}
+	}
+	&__complete {
+		color: black;
+	}
+	&__edit {
+		font-weight: bold;
+		color: black;
+	}
+	&__delete {
+		color: tomato;
+	}
+}
+
+.edit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 400px;
+	color: white;
+	background-color: black;
+	border-radius: 5px;
+	&__body {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 90%;
+		padding: 10px;
+	}
+	h3 {
+		padding: 20px;
+	}
+	&__info {
+		margin-bottom: 20px;
+		color: black;
+	}
+	&__input {
+		width: 100%;
+		padding: 10px 20px;
+		border: none;
+		color: black;
+		background-color: white;
+	}
+	&__btn {
+		display: inline-block;
+		padding: 10px 22px;
+		margin: 20px;
+		border: none;
+		border-radius: 5px;
+        border: 1px solid white;
+		color: black;
+		background-color: white;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	&__btn:hover {
+		color: white;
+		background-color: black;
+	}
+}

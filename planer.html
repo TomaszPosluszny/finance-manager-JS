@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+			<script
+			src="https://kit.fontawesome.com/3ac07e2a19.js"
+			crossorigin="anonymous">
+		</script>
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@200;400;900&display=swap"rel="stylesheet"/>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/hamburger.css" />
+	</head>
+	<body>
+		<button class="hamburger" type="button">
+			<span class="hamburger__box">
+				<span class="hamburger__inner"></span>
+			</span>
+		</button>
+		<nav class="mobile">
+			<a class="mobile__link" href="#menadzer">Menadżer</a>
+			<a class="mobile__link" href="#planer">Planer</a>
+			<a class="mobile__link" href="#notes">Notatnik</a>
+			<a class="mobile__link" href="#konto.">Załóż konto</a>
+			<a class="mobile__link" href="#konto">Zaloguj</a>
+		</nav>
+		<nav class="deskop">
+			<h1 class="header__name-company">Ogarniam finanse</h1>
+			<a class="deskop__link" href="index.html">Menadżer</a>
+			<a class="deskop__link" href="#planer">Planer</a>
+			<a class="deskop__link" href="notes.html">Notatnik</a>
+			<div>
+				<a class="deskop__link--border" href="#konto">Załóż konto</a>
+				<a class="deskop__link--border" href="#konto">Zaloguj</a>
+			</div>
+		</nav>
+		<main>
+            <div class="list">
+                <div class="list__header">
+                    <h1>Planer</h1>
+                    <input type="text" class="list__input" placeholder="Wpisz treść zadania...">
+                    <button class="list__btn">Add</button>
+                </div>
+        
+                <div class="todo">
+                    <h3>Lista zadań:</h3>
+                    <p class="todo__alert">Brak zadań na liście.</p>
+                    <ul>
+                        <li id="test">Wypić kawę <div class="todo__tools">
+                                <button class="todo__complete"><i class="fas fa-check"></i></button><button class="todo__edit">EDIT</button><button class="todo__delete"><i class="fas fa-times"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="edit">
+                <h3>Edytuj zadanie:</h3>
+                <div class="edit__body">
+                    <p class="edit__info"></p>
+                    <input type="text" class="edit__input" placeholder="Wprowadź nową treść zadania...">
+                    <button class="edit__btn accept">Zatwierdź</button>
+                    <button class="edit__btn cancel">Anuluj</button>
+                </div>
+            </div>
+        
+		</main>
+		<div class="note">
+			</div>
+		</div>
+		</div>
+		<footer class="footer">
+			<p class="footer__boxes">Ogarniam finanse to profesionalny menadżer wydatków</>
+			<div class="footer__box-social">
+				<a href="#" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+				<a href="#" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+				<a href="#" class="footer__box-link"><i class="fab fa-instagram"></i></a>
+			</div>
+			<p class="footer__bottom-text"> &copy;<span class="footer__year"></span>Ogarniam Finanse 2022</p>
+		</footer>
+		<script  src="js/planer.js"></script>
+	</body>
+</html>

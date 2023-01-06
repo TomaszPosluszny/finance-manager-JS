@@ -119,6 +119,141 @@ h1.header__name-company {
   display: none;
 }
 
+h1 {
+  margin-bottom: 20px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.list {
+  width: 400px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+.list__header {
+  padding: 40px;
+}
+.list__input {
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 1px solid #191919;
+  color: var(--light-dark);
+  background-color: white;
+}
+.list__btn {
+  padding: 10px 22px;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.list__btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.todo {
+  padding: 20px 0;
+}
+.todo h3 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.todo li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding-left: 20px;
+  list-style: none;
+  background-color: white;
+}
+.todo__alert {
+  margin-top: 20px;
+  color: black;
+}
+.todo__tools {
+  display: inline-block;
+}
+.todo__tools button {
+  padding: 15px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.todo__tools button:hover {
+  color: white;
+  background-color: black;
+}
+.todo__complete {
+  color: black;
+}
+.todo__edit {
+  font-weight: bold;
+  color: black;
+}
+.todo__delete {
+  color: tomato;
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+.edit__body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  padding: 10px;
+}
+.edit h3 {
+  padding: 20px;
+}
+.edit__info {
+  margin-bottom: 20px;
+  color: black;
+}
+.edit__input {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+.edit__btn {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.edit__btn:hover {
+  color: white;
+  background-color: black;
+}
+
 .pushbutton {
   padding: 10px 10px;
   margin-bottom: 30px;
