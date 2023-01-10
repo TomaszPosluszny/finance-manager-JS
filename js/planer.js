@@ -18,6 +18,7 @@ const addNewExpenses = () => {
 
         expensesInput.value = '';
         alertInfo.innerText = ''
+        createButton()
     } else {
         alertInfo.innerText = 'Wpisz treść zadania!'
     }
@@ -28,5 +29,29 @@ const enterCheck = () => {
         addNewExpenses();
     }
 }
+
+
+const createButton = () => {
+    const toolsPanel = document.createElement('div');
+    toolsPanel.classList.add('todo__tools');
+    newExpenses.appendChild(toolsPanel);
+
+    const completeBtn = document.createElement('todo__complete');
+    completeBtn.classList.add('complete');
+    completeBtn.innerHTML = '<i class="fas fa-check"></i>';
+
+    const editBtn = document.createElement('button');
+    editBtn.classList.add('todo__edit');
+    editBtn.innerHTML = 'EDIT';
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('todo__delete');
+    deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
+
+    toolsPanel.appendChild(completeBtn);
+    toolsPanel.appendChild(editBtn);
+    toolsPanel.appendChild(deleteBtn);
+}
+
 addBtn.addEventListener('click', addNewExpenses);
 expensesInput.addEventListener('keyup', enterCheck);
