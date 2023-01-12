@@ -254,6 +254,13 @@ h1 {
   background-color: black;
 }
 
+.completed {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--light-dark);
+  text-decoration: line-through;
+}
+
 .pushbutton {
   padding: 10px 10px;
   margin-bottom: 30px;

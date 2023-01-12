@@ -133,3 +133,9 @@ h1 {
 		background-color: black;
 	}
 }
+.completed {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--light-dark);
+    text-decoration: line-through;
+}
