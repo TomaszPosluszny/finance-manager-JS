@@ -2,8 +2,9 @@ const expensesInput = document.querySelector('.list__input');
 const alertInfo = document.querySelector('.todo__alert');
 const addBtn = document.querySelector('.list__btn');
 const ulList = document.querySelector('.todo ul');
-
+const allTasks = document.getElementsByTagName('li');
 let idNumber = 0;
+let newExpenses
 
 const addNewExpenses = () => {
 	if (expensesInput.value !== '') {
@@ -57,10 +58,18 @@ const checkClick = (e) => {
 		} else if (e.target.closest('button').classList.contains('todo__edit')) {
 			console.log('edit');
 		} else if (e.target.closest('button').classList.contains('todo__delete')) {
-			console.log('delete');
+			deleteTask(e);
 		}
 	}
 };
+const deleteTask = e => {
+    const deleteTodo = e.target.closest('li');
+    deleteTodo.remove();
+
+    if (allTasks.length === 0) {
+        alertInfo.innerText = 'Brak zadań na liście.';
+    }
+}
 
 addBtn.addEventListener('click', addNewExpenses);
 expensesInput.addEventListener('keyup', enterCheck);
