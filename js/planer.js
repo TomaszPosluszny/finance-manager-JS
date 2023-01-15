@@ -4,20 +4,14 @@ const alertInfo = document.querySelector('.todo__alert');
 const addBtn = document.querySelector('.list__btn');
 const ulList = document.querySelector('.todo ul');
 const allTasks = document.getElementsByTagName('li');
-const checkbox = document.querySelector('#important');
+const checkbox = document.getElementById('important')
 let idNumber = 0;
 let newExpenses;
 let newAdd;
 
-const input = document.querySelector("#important");
 
-if (input.checked) {
-    console.log("Wartość radio: ", input.value);
-}else {
-	alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
-}
 const addNewExpenses = () => {
-	if (expensesInput.value !== '' && dateInput.value !== '') {
+	if (expensesInput.value !== '' && dateInput.value !== '' ) {
 		idNumber++;
 		newExpenses = document.createElement('li');
 		newExpenses.innerText = expensesInput.value;
