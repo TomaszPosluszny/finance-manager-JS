@@ -1,4 +1,3 @@
-
 h1 {
 	margin-bottom: 20px;
 	color: black;
@@ -15,13 +14,35 @@ h1 {
 	}
 	&__input {
 		padding: 10px 20px;
+		margin-top: 10px;
 		margin-right: 20px;
+		border: 1px solid $darker;
+		color: black;
+		background-color: white;
+	}
+	&__date {
+		padding: 10px 20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		border: 1px solid $darker;
+		color: black;
+		background-color: white;
+	}
+	&__checkbox {
+		padding: 10px 20px;
+		margin-top: 10px;
+		margin-right: 10px;
 		border: 1px solid $darker;
 		color: var(--light-dark);
 		background-color: white;
 	}
+	&__important {
+		color: red;
+	}
 	&__btn {
-		padding: 10px 22px;
+		padding: 10px 20px;
+		margin-right: 20px;
+		margin-top: 10px;
 		border: 1px solid $darker;
 		border-radius: 5px;
 		color: black;
@@ -121,7 +142,7 @@ h1 {
 		margin: 20px;
 		border: none;
 		border-radius: 5px;
-        border: 1px solid white;
+		border: 1px solid white;
 		color: black;
 		background-color: white;
 		text-transform: uppercase;
@@ -134,8 +155,8 @@ h1 {
 	}
 }
 .completed {
-    font-size: 12px;
-    font-style: italic;
-    color: var(--light-dark);
-    text-decoration: line-through;
+	font-size: 12px;
+	font-style: italic;
+	color: var(--light-dark);
+	text-decoration: line-through;
 }

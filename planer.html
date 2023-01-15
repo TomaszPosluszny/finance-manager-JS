@@ -40,15 +40,19 @@
             <div class="list">
                 <div class="list__header">
                     <h1>Planer</h1>
-                    <input type="text" class="list__input" placeholder="Wpisz treść zadania...">
-                    <button class="list__btn">Add</button>
+					<p>Do kiedy zapłaćić<input type="date" class="list__date" id="important" ></p>
+					<p class="list__important"><input type="text" class="list__input" placeholder="Wpisz treść wydatku...">
+					<input type="checkbox" class="list__checkbox" id="important" >Piorytet</p>
+                    <button class="list__btn">Dodaj</button>
+					<p class="todo__alert">Brak zadań na liście.</p>
                 </div>
-        
+				
                 <div class="todo">
                     <h3>Lista zadań:</h3>
-                    <p class="todo__alert">Brak zadań na liście.</p>
+                    
                     <ul>
-                        <li id="test">Wypić kawę <div class="todo__tools">
+                        <li id="test">Wypić kawę 
+							<div class="todo__tools">
                                 <button class="todo__complete"><i class="fas fa-check"></i></button>
 								<button class="todo__edit">EDIT</button>
 								<button class="todo__delete"><i class="fas fa-times"></i></button>

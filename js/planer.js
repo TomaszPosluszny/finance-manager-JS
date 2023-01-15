@@ -1,24 +1,40 @@
 const expensesInput = document.querySelector('.list__input');
+const dateInput = document.querySelector('.list__date');
 const alertInfo = document.querySelector('.todo__alert');
 const addBtn = document.querySelector('.list__btn');
 const ulList = document.querySelector('.todo ul');
 const allTasks = document.getElementsByTagName('li');
+const checkbox = document.querySelector('#important');
 let idNumber = 0;
-let newExpenses
+let newExpenses;
+let newAdd;
 
+const input = document.querySelector("#important");
+
+if (input.checked) {
+    console.log("Wartość radio: ", input.value);
+}else {
+	alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
+}
 const addNewExpenses = () => {
-	if (expensesInput.value !== '') {
+	if (expensesInput.value !== '' && dateInput.value !== '') {
 		idNumber++;
 		newExpenses = document.createElement('li');
 		newExpenses.innerText = expensesInput.value;
+
 		newExpenses.setAttribute('id', `todo-${idNumber}`);
 		ulList.appendChild(newExpenses);
+		newData = document.createElement('div');
+		newData.innerText = dateInput.value;
+		newExpenses.appendChild(newData);
+
 
 		expensesInput.value = '';
 		alertInfo.innerText = '';
 		createButton();
+		
 	} else {
-		alertInfo.innerText = 'Wpisz treść zadania!';
+		alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
 	}
 };
 
@@ -62,14 +78,14 @@ const checkClick = (e) => {
 		}
 	}
 };
-const deleteTask = e => {
-    const deleteTodo = e.target.closest('li');
-    deleteTodo.remove();
+const deleteTask = (e) => {
+	const deleteTodo = e.target.closest('li');
+	deleteTodo.remove();
 
-    if (allTasks.length === 0) {
-        alertInfo.innerText = 'Brak zadań na liście.';
-    }
-}
+	if (allTasks.length === 0) {
+		alertInfo.innerText = 'Brak zadań na liście.';
+	}
+};
 
 addBtn.addEventListener('click', addNewExpenses);
 expensesInput.addEventListener('keyup', enterCheck);
