@@ -3,11 +3,17 @@ const dateInput = document.querySelector('.list__date');
 const alertInfo = document.querySelector('.todo__alert');
 const addBtn = document.querySelector('.list__btn');
 const ulList = document.querySelector('.todo ul');
+const editInput = document.querySelector('.edit__input');
+const editInfo = document.querySelector('.edit__info');
+const editAdd = document.querySelector('.edit');
+const addEditBtn = document.querySelector('.accept');
+const closeEditBtn = document.querySelector('.cancel');
 const allTasks = document.getElementsByTagName('li');
 const checkbox = document.getElementById('important');
 let idNumber = 0;
 let newExpenses;
 let newAdd;
+let editedTodo;
 
 const addNewExpenses = () => {
 	if (checkbox.checked) {
@@ -83,7 +89,7 @@ const checkClick = (e) => {
 			e.target.closest('li').classList.toggle('completed');
 			e.target.closest('button').classList.toggle('completed');
 		} else if (e.target.closest('button').classList.contains('todo__edit')) {
-			console.log('edit');
+			editTask(e);
 		} else if (e.target.closest('button').classList.contains('todo__delete')) {
 			deleteTask(e);
 		}
@@ -98,6 +104,30 @@ const deleteTask = (e) => {
 	}
 };
 
+const editTask = (e) => {
+	const oldTodo = e.target.closest('li').id;
+	editedTodo = document.getElementById(oldTodo);
+	editInput.value = editedTodo.firstChild.textContent;
+
+	editAdd.style.display = 'flex';
+};
+
+const changeTodo = () => {
+	if (editInput.value !== '') {
+		editedTodo.firstChild.textContent = editInput.value;
+		editAdd.style.display = 'none';
+		editInfo.innerText = '';
+	} else {
+		editInfo.innerText = 'Musisz podać jakąś treść!';
+	}
+};
+
+const closePopup = () => {
+	editAdd.style.display = 'none';
+	editInfo.innerText = '';
+};
 addBtn.addEventListener('click', addNewExpenses);
 expensesInput.addEventListener('keyup', enterCheck);
 ulList.addEventListener('click', checkClick);
+addEditBtn.addEventListener('click', changeTodo);
+closeEditBtn.addEventListener('click', closePopup);
