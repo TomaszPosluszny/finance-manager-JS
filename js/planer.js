@@ -4,31 +4,48 @@ const alertInfo = document.querySelector('.todo__alert');
 const addBtn = document.querySelector('.list__btn');
 const ulList = document.querySelector('.todo ul');
 const allTasks = document.getElementsByTagName('li');
-const checkbox = document.getElementById('important')
+const checkbox = document.getElementById('important');
 let idNumber = 0;
 let newExpenses;
 let newAdd;
 
-
 const addNewExpenses = () => {
-	if (expensesInput.value !== '' && dateInput.value !== '' ) {
-		idNumber++;
-		newExpenses = document.createElement('li');
-		newExpenses.innerText = expensesInput.value;
+	if (checkbox.checked) {
+		if (expensesInput.value !== '' && dateInput.value !== '') {
+			idNumber++;
+			newExpenses = document.createElement('li');
+			newExpenses.innerText = expensesInput.value;
 
-		newExpenses.setAttribute('id', `todo-${idNumber}`);
-		ulList.appendChild(newExpenses);
-		newData = document.createElement('div');
-		newData.innerText = dateInput.value;
-		newExpenses.appendChild(newData);
+			newExpenses.setAttribute('id', `todo-${idNumber}`);
+			ulList.appendChild(newExpenses);
+			newData = document.createElement('div');
+			newData.innerText = dateInput.value;
+			newExpenses.style.color = 'red';
+			newExpenses.appendChild(newData);
 
-
-		expensesInput.value = '';
-		alertInfo.innerText = '';
-		createButton();
-		
+			expensesInput.value = '';
+			alertInfo.innerText = '';
+			createButton();
+		} else {
+			alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
+		}
 	} else {
-		alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
+		if (expensesInput.value !== '' && dateInput.value !== '') {
+			idNumber++;
+			newExpenses = document.createElement('li');
+			newExpenses.innerText = expensesInput.value;
+			newExpenses.setAttribute('id', `todo-${idNumber}`);
+			ulList.appendChild(newExpenses);
+			newData = document.createElement('div');
+			newData.innerText = dateInput.value;
+			newExpenses.appendChild(newData);
+
+			expensesInput.value = '';
+			alertInfo.innerText = '';
+			createButton();
+		} else {
+			alertInfo.innerText = 'Podaj datę i wpisz treść zadania!';
+		}
 	}
 };
 
