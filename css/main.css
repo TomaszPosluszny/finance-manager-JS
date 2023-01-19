@@ -284,6 +284,83 @@ h1 {
   text-decoration: line-through;
 }
 
+.area {
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid black;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.area h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.area form {
+  padding: 40px;
+  font-size: 18px;
+}
+.area__box {
+  margin-bottom: 10px;
+}
+.area__box label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.area__box input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+}
+.area__error {
+  visibility: hidden;
+  margin: 1px 0 0 2px;
+  font-size: 14px;
+  color: rgb(0, 137, 250);
+}
+.area__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+.area__buttons--clear, .area__buttons--send, .area__buttons--close {
+  padding: 12px 20px;
+  margin-left: 20px;
+  color: #232323;
+  border: 1px solid #191919;
+  border-radius: 5px;
+  background: none;
+  transition: color 0.3s, background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.area__buttons--clear:hover, .area__buttons--send:hover, .area__buttons--close:hover {
+  color: #fff;
+  background-color: #232323;
+}
+.area__popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: top 0.5s;
+}
+.area__popup p {
+  font-size: 28px;
+}
+.area__popup button {
+  margin-top: 20px;
+}
+
 .pushbutton {
   padding: 10px 10px;
   margin-bottom: 30px;

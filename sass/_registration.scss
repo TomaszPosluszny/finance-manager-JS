@@ -1,0 +1,80 @@
+.area {
+	width: 400px;
+	background-color: #fff;
+	border: 1px solid black;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	h2 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	form {
+		padding: 40px;
+		font-size: 18px;
+	}
+	&__box {
+		margin-bottom: 10px;
+		label {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		input {
+			width: 100%;
+			padding: 8px;
+			font-size: 14px;
+			border: 1px solid rgb(197, 197, 197);
+			border-radius: 5px;
+		}
+	}
+	&__error {
+		visibility: hidden;
+		margin: 1px 0 0 2px;
+		font-size: 14px;
+		color: rgb(0, 137, 250);
+	}
+	&__buttons {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__buttons--clear,
+	&__buttons--send,
+	&__buttons--close {
+		padding: 12px 20px;
+		margin-left: 20px;
+		color: $dark;
+		border: 1px solid $darker;
+		border-radius: 5px;
+		background: none;
+		transition: color 0.3s, background-color 0.3s;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&__buttons--clear:hover,
+	&__buttons--send:hover,
+	&__buttons--close:hover {
+		color: $white;
+		background-color: $dark;
+	}
+	&__popup {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		top: -300px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 600px;
+		height: 200px;
+		background-color: rgb(255, 255, 255);
+		border-radius: 8px;
+		border: 2px solid black;
+		transition: top 0.5s;
+		p {
+			font-size: 28px;
+		}
+		button {
+			margin-top: 20px;
+		}
+	}
+}
