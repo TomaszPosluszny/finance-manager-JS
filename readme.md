@@ -8,10 +8,9 @@
 - Exchange rate (connection to external api)
 - Important expense (countdown to this event)
 - Notebook (adding notes)
+- Planner (advanced ToDo List)
 
 **In the making**
-
-- Planner (advanced ToDo List)
 - Form validator (login and registration)
 
 ## Technologies
