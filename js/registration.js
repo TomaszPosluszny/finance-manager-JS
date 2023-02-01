@@ -41,6 +41,16 @@ const checkPassword = (pass1, pass2) => {
         showError(pass2, 'Hasła do siebie nie pasują.')
     }
 }
+
+const checkEmail = email => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (re.test(email.value)) {
+        clearError(email)
+    } else {
+        showError(email, 'E-mail jest niepoprawny')
+    }
+}
 sendBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 
@@ -48,6 +58,7 @@ sendBtn.addEventListener('click', (e) => {
 	checkLength(username, 3);
     checkLength(password, 8);
     checkPassword(password, passwordTwo)
+	checkEmail(email);
 });
 
 clearBtn.addEventListener('click', (e) => {
