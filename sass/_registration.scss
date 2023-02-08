@@ -4,6 +4,7 @@
 	border: 1px solid black;
 	margin-top: 25px;
 	margin-bottom: 25px;
+
 	h2 {
 		text-align: center;
 		margin-bottom: 30px;
@@ -32,6 +33,7 @@
 		font-size: 14px;
 		color: rgb(0, 137, 250);
 	}
+
 	&__buttons {
 		display: flex;
 		justify-content: flex-end;
@@ -55,23 +57,11 @@
 		color: $white;
 		background-color: $dark;
 	}
-	&__popup {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		position: absolute;
-		top: -300px;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 600px;
-		height: 200px;
-		background-color: rgb(255, 255, 255);
-		border-radius: 8px;
-		border: 2px solid black;
-		transition: top 0.5s;
+	&__send {
+		display: none;
+		margin-top: 10px;
 		p {
-			font-size: 28px;
+			font-size: 15px;
 		}
 		button {
 			margin-top: 20px;
@@ -80,17 +70,17 @@
 }
 
 .area__box.error input {
-    border: 1px solid black;
-    background-color: rgb(208, 208, 208);
+	border: 1px solid black;
+	background-color: rgb(208, 208, 208);
 }
 
 .area__box .area__error {
-    visibility: hidden;
-    margin: 5px 0 0 10px;
-    font-size: 14px;
-    color: rgb(0, 137, 250);
+	visibility: hidden;
+	margin: 5px 0 0 10px;
+	font-size: 14px;
+	color: rgb(0, 137, 250);
 }
 
 .area__box.error .area__error {
-    visibility: visible;
+	visibility: visible;
 }

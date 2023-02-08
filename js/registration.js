@@ -4,7 +4,7 @@ const passwordTwo = document.querySelector('#passwordTwo');
 const email = document.querySelector('#email');
 const sendBtn = document.querySelector('.area__buttons--send');
 const clearBtn = document.querySelector('.area__buttons--clear');
-const info = document.querySelector('.area__popup');
+const info = document.querySelector('.area__send');
 
 const showError = (input, msg) => {
 	const formBox = input.parentElement;
@@ -29,53 +29,65 @@ const checkForm = (input) => {
 	});
 };
 
-
 const checkLength = (input, min) => {
-    if (input.value.length < min) {
-        showError(input, `${input.previousElementSibling.innerText.slice(0, -1)} składa się z min. ${min} znaków.`)
-    }
-}
+	if (input.value.length < min) {
+		showError(
+			input,
+			`${input.previousElementSibling.innerText.slice(
+				0,
+				-1
+			)} składa się z min. ${min} znaków.`
+		);
+	}
+};
 
 const checkPassword = (pass1, pass2) => {
-    if (pass1.value !== pass2.value) {
-        showError(pass2, 'Hasła do siebie nie pasują.')
-    }
-}
+	if (pass1.value !== pass2.value) {
+		showError(pass2, 'Hasła do siebie nie pasują.');
+	}
+};
 
-const checkEmail = email => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const checkEmail = (email) => {
+	const re =
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (re.test(email.value)) {
-        clearError(email)
-    } else {
-        showError(email, 'E-mail jest niepoprawny')
-    }
-}
+	if (re.test(email.value)) {
+		clearError(email);
+	} else {
+		showError(email, 'E-mail jest niepoprawny');
+	}
+};
 
 const checkErrors = () => {
+	const allInputs = document.querySelectorAll('.area__box');
+	let errorCount = 0;
 
-    const allInputs = document.querySelectorAll('.form-box');
-    let errorCount = 0;
+	allInputs.forEach((el) => {
+		if (el.classList.contains('error')) {
+			errorCount++;
+		}
+	});
 
-    allInputs.forEach(el => {
-        if (el.classList.contains('error')) {
-            errorCount++
-        }
-    })
+	if (errorCount === 0) {
+		addError();
+	}
+};
+const addError = () => {
+	info.style.display = 'flex';
+};
 
-    if (errorCount === 0) {
-        popup.classList.add('show-popup')
-    }
-}
+const deleteError = () => {
+	info.style.display = 'none';
+};
 sendBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 
 	checkForm([username, password, passwordTwo, email]);
 	checkLength(username, 3);
-    checkLength(password, 8);
-    checkPassword(password, passwordTwo)
+	checkLength(password, 8);
+	checkPassword(password, passwordTwo);
 	checkEmail(email);
-	checkErrors()
+	checkErrors();
 });
 
 clearBtn.addEventListener('click', (e) => {
@@ -83,6 +95,6 @@ clearBtn.addEventListener('click', (e) => {
 
 	[username, password, passwordTwo, email].forEach((el) => {
 		el.value = '';
-		clearError(el)
+		clearError(el);
 	});
 });

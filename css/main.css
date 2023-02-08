@@ -338,26 +338,14 @@ h1 {
   color: #fff;
   background-color: #232323;
 }
-.area__popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: -300px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 200px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
-  border: 2px solid black;
-  transition: top 0.5s;
+.area__send {
+  display: none;
+  margin-top: 10px;
 }
-.area__popup p {
-  font-size: 28px;
+.area__send p {
+  font-size: 15px;
 }
-.area__popup button {
+.area__send button {
   margin-top: 20px;
 }
 
