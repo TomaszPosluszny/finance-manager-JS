@@ -9,8 +9,6 @@
 - Important expense (countdown to this event)
 - Notebook (adding notes)
 - Planner (advanced ToDo List)
-
-**In the making**
 - Form validator (login and registration)
 
 ## Technologies
