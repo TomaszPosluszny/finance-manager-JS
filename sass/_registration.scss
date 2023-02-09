@@ -67,6 +67,17 @@
 			margin-top: 20px;
 		}
 	}
+	&__data {
+		display: none;
+		margin-top: 10px;
+		p {
+			font-size: 15px;
+		}
+		button {
+			margin-top: 20px;
+		}
+	}
+	
 }
 
 .area__box.error input {

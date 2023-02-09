@@ -151,22 +151,6 @@ main {
 	border-bottom: none;
 }
 
-@media (min-width: 768px) {
-	.burger-icon {
-		display: none;
-	}
-	.nav-items {
-		display: block;
-	}
-	.nav-items a {
-		padding: 0 30px;
-		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: bold;
-		color: #333;
-		transition: color 0.3s;
-	}
-}
 .time {
 	padding-top: 20px;
 	&__body {

@@ -348,6 +348,16 @@ h1 {
 .area__send button {
   margin-top: 20px;
 }
+.area__data {
+  display: none;
+  margin-top: 10px;
+}
+.area__data p {
+  font-size: 15px;
+}
+.area__data button {
+  margin-top: 20px;
+}
 
 .area__box.error input {
   border: 1px solid black;
@@ -630,22 +640,6 @@ main {
   border-bottom: none;
 }
 
-@media (min-width: 768px) {
-  .burger-icon {
-    display: none;
-  }
-  .nav-items {
-    display: block;
-  }
-  .nav-items a {
-    padding: 0 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s;
-  }
-}
 .time {
   padding-top: 20px;
 }
