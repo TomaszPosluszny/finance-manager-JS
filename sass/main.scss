@@ -61,14 +61,12 @@ h1.header__name-company {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	background-color: #fff;
-	transform: translate(-102%);
 	transition: transform 0.3s;
-	z-index: 10;
 
 	&--acvite {
 		transform: translateX(0);
