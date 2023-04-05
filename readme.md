@@ -22,4 +22,4 @@
 
 ## Setup
 
-[Link to the page](https://tomaszposluszny.github.io/finance-manager/)
+[Link to the page](https://tomaszposluszny.github.io/finance-manager-JS/)

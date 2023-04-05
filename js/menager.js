@@ -19,6 +19,7 @@ const walletControlDeleteBtn = document.querySelector(
 const saveBtn = document.querySelector('.buttons__save');
 const deleteBtn = document.querySelector('.transaction__delete');
 
+
 const exchangeRate = document.querySelector('.exchange__rate');
 const exchangeMoney = document.querySelector('.exchange__money');
 const exchangeChoose = document.querySelector('.exchange__choose');

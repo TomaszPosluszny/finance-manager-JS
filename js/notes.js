@@ -13,6 +13,10 @@ const noteArea = document.querySelector('.note');
 let selectedValue;
 let cardID = 0;
 
+const selectValue = () => {
+    selectedValue = category.options[category.selectedIndex].text;
+}
+
 const showPanel = () => {
 	notePanel.style.display = 'flex';
 };
@@ -66,9 +70,7 @@ const createNote = () => {
     checkColor(newNote);
 }
 
-const selectValue = () => {
-    selectedValue = category.options[category.selectedIndex].text;
-}
+
 const checkColor = (note) => {
 	switch (selectedValue) {
 		case 'Zakupy':
