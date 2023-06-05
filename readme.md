@@ -23,9 +23,13 @@
 ## Screenshots
 
 ![Screenshot](screenshot/menager.png)
+
 ![Screenshot](screenshot/planer.png)
+
 ![Screenshot](screenshot/notes.png)
+
 ![Screenshot](screenshot/registration.png)
+
 ![Screenshot](screenshot/login.png)
 
 ## Setup
