@@ -20,6 +20,14 @@
 - JavaScript
 - RWD
 
+## Screenshots
+
+![Screenshot](screenshot/menager.png)
+![Screenshot](screenshot/planer.png)
+![Screenshot](screenshot/notes.png)
+![Screenshot](screenshot/registration.png)
+![Screenshot](screenshot/login.png)
+
 ## Setup
 
 [Link to the page](https://tomaszposluszny.github.io/finance-manager-JS/)
