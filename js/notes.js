@@ -14,8 +14,8 @@ let selectedValue;
 let cardID = 0;
 
 const selectValue = () => {
-    selectedValue = category.options[category.selectedIndex].text;
-}
+	selectedValue = category.options[category.selectedIndex].text;
+};
 
 const showPanel = () => {
 	notePanel.style.display = 'flex';
@@ -46,11 +46,11 @@ const addNote = () => {
 	}
 };
 const createNote = () => {
-    const newNote = document.createElement('div');
-    newNote.classList.add('note__area');
-    newNote.setAttribute('id', cardID);
+	const newNote = document.createElement('div');
+	newNote.classList.add('note__area');
+	newNote.setAttribute('id', cardID);
 
-    newNote.innerHTML = `
+	newNote.innerHTML = `
         <div class="note__header">
         <h3 class="note__title">${selectedValue}</h3>
         <button class="note__delete" onclick="deleteNote(${cardID})">
@@ -60,16 +60,15 @@ const createNote = () => {
         <div class="note__body">
             ${textarea.value}
         </div>
-    `
+    `;
 
-    noteArea.appendChild(newNote);
-    cardID++;
-    textarea.value = '';
-    category.selectedIndex = 0;
-    notePanel.style.display = 'none';
-    checkColor(newNote);
-}
-
+	noteArea.appendChild(newNote);
+	cardID++;
+	textarea.value = '';
+	category.selectedIndex = 0;
+	notePanel.style.display = 'none';
+	checkColor(newNote);
+};
 
 const checkColor = (note) => {
 	switch (selectedValue) {
@@ -82,7 +81,7 @@ const checkColor = (note) => {
 		case 'Inne':
 			note.style.backgroundColor = 'rgb(107,102,102)';
 			break;
-            case 'Hobby':
+		case 'Hobby':
 			note.style.backgroundColor = 'rgb(65,65,65)';
 			break;
 	}
@@ -95,7 +94,6 @@ const deleteNote = (id) => {
 const deleteAllNotes = () => {
 	noteArea.textContent = '';
 };
-
 
 addBtn.addEventListener('click', showPanel);
 cancelNote.addEventListener('click', closePanel);
